@@ -1,0 +1,4 @@
+# 忽略掉所有pycache目录
+__pycache__/
+*/__pycache__/
+**/__pycache__/
