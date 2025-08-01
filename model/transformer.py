@@ -28,7 +28,11 @@ class Transformer(PreTrainedModel):
         self.tok_embeddings = nn.Embedding(args.vocab_size, args.dim)
         # Dropout层
         self.dropout = nn.Dropout(args.dropout)
-        # Decoder层
+        '''        
+        Decoder层
+        使用ModuleList来存储多个DecoderLayer
+        这里就是你config.py超参数设置了多少层Decoder based Transformer
+        '''
         self.layers = torch.nn.ModuleList()
         for layer_id in range(args.n_layers):
             self.layers.append(DecoderLayer(layer_id, args))
@@ -152,7 +156,7 @@ def test() -> None:
     # LLaMA2Model.forward 接受两个参数，tokens和targets，其中tokens是输入的张量, 应为int类型
     x = torch.randint(0, 6144, (1, 50)) # [bs, seq_len]
     # 实例化LLaMA2Model
-    model = Transformer(args=args)
+    model = Transformer(args=ModelConfig())
     # 计算model的全部参数
     num_params = sum(p.numel() for p in model.parameters())
     print('Number of parameters:', num_params)

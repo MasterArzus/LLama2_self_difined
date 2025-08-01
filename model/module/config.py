@@ -5,7 +5,7 @@ class ModelConfig(PretrainedConfig):
     def __init__(
             self,
             dim: int = 768, # 模型维度
-            n_layers: int = 12, # Transformer的层数
+            n_layers: int = 12, # Decoder based Transformer的层数
             n_heads: int = 16, # 注意力机制的头数
             n_kv_heads: int = 8, # 键值头的数量
             vocab_size: int = 6144, # 词汇表大小

@@ -1,3 +1,8 @@
 transformers
 torch
 typing
+tokenizers
+datasets
+tqdm
+modelscope
+huggingface_hub
