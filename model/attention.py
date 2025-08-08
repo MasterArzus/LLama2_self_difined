@@ -2,10 +2,10 @@ import math
 import torch
 from torch import nn, Tensor
 import torch.nn.functional as F
-from module.repeat_kv import repeat_kv
-from module.rotary_emb import *
-from module.config import ModelConfig
-from module.RMSnorm import RMSNorm
+from model.module.repeat_kv import repeat_kv
+from model.module.rotary_emb import *
+from model.module.config import ModelConfig
+from model.module.RMSnorm import RMSNorm
 
 class Attention(nn.Module):
     def __init__(self, args: ModelConfig) -> None:

@@ -4,10 +4,10 @@ import torch.nn.functional as F
 from typing import Optional
 from transformers import PreTrainedModel
 from transformers.modeling_outputs import CausalLMOutputWithPast
-from module.config import ModelConfig
-from module.rotary_emb import precompute_freqs_cis
-from module.RMSnorm import RMSNorm
-from decoder import DecoderLayer
+from model.module.config import ModelConfig
+from model.module.rotary_emb import precompute_freqs_cis
+from model.module.RMSnorm import RMSNorm
+from model.decoder import DecoderLayer
 import math
 
 

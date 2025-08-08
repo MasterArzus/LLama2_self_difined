@@ -1,10 +1,10 @@
 import torch
 from torch import nn
-from module.config import ModelConfig
-from module.rotary_emb import precompute_freqs_cis
-from module.RMSnorm import RMSNorm
-from attention import Attention
-from mlp import MLP
+from model.module.config import ModelConfig
+from model.module.rotary_emb import precompute_freqs_cis
+from model.module.RMSnorm import RMSNorm
+from model.attention import Attention
+from model.mlp import MLP
 
 
 class DecoderLayer(nn.Module):

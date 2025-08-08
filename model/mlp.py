@@ -1,7 +1,7 @@
 import torch
 from torch import nn, Tensor
 import torch.nn.functional as F
-from module.config import ModelConfig
+from model.module.config import ModelConfig
 
 class MLP(nn.Module):
     def __init__(self, dim: int, hidden_dim: int, multiple_of: int, dropout: float):
