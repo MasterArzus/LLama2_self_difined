@@ -174,14 +174,14 @@ def eval_tokenizer(tokenizer_path: str) -> None:
 def main():
     # 配置路径
     data_path = "your data path"
-    save_dir = "tokenizer_k"
+    save_dir = "LLama2_self_difined/tokenizer/tokenizer_k"
 
     # 训练tokenizer
-    train_tokenizer(
-        data_path=data_path,
-        save_dir=save_dir,
-        vocab_size=6144
-    )
+    # train_tokenizer(
+    #     data_path=data_path,
+    #     save_dir=save_dir,
+    #     vocab_size=6144
+    # )
 
     # 评估tokenizer
     eval_tokenizer(save_dir)
